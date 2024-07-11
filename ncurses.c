@@ -558,7 +558,7 @@ int acessa_memoria(mem *instrucoes, int pc, int escrita, int *registradores, int
 				*ALUOutToReg = ALUOut;
                 break;
             case 15: // se for sw transfere pra respectiva posicao da memória;
-                registradores[escrita] = dados[instrucoes[pc].rt];
+                dados[instrucoes[pc].rt] = registradores[escrita];
                 break;
             case 11: // se for lw transfere pro rt
                 return dados[escrita];
